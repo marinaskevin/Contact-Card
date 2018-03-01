@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Card</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+	<script>
+		$(document).ready(function() {
+
+			$(document).on("click",".btn", function(e){
+				e.preventDefault();
+				addCard();
+			});
+
+			function addCard()
+			{
+				var firstName = $("#first_name").val();
+				var lastName = $("#last_name").val();
+				var description = $("#description").val();
+				var s = `
+					<div class='card'>
+						<h4>`+firstName+` `+lastName+`</h4>
+						<p alttext="`+description+`">Click for description</p>
+					</div>
+				`;
+				$(".rolodex").prepend(s);
+				$("input, textarea").each(function() {
+					$(this).val("");	
+				})
+			}
+
+			$(document).on("click","p", function(){
+				var s = $(this).attr("alttext");
+				$(this).html(s);
+			})
+
+		})
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<form>
+			<label for="first_name"><span>First name: </span><input id="first_name" type="text" name="first_name"></label>
+			<label for="last_name"><span>Last name: </span><input id="last_name" type="text" name="last_name"></label>
+			<label for="description"><textarea id="description" name="description" rows="8" cols="20"> </textarea></label>
+			<button class="btn">Add User</button>
+		</form>
+		<div class="rolodex">
+
+		</div>
+	</div>
+</body>
+</html>

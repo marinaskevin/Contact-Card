@@ -1,0 +1,86 @@
+body
+{
+	font-size: 1.2em;
+	font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	z-index: 5;
+}
+
+.container
+{
+	display: inline;
+	vertical-align: top;
+}
+
+form
+{
+	z-index: 15;
+	display: inline-block;
+	width: 400px;
+}
+
+h4
+{
+	margin: 5px;
+}
+
+p
+{
+	margin: 5px;
+	font-size: 0.7em;
+}
+
+label
+{
+	display: block;
+}
+
+textarea
+{
+	width: 100%;
+}
+
+input
+{
+	width: 225px;
+	margin: 5px;
+}
+
+input[type=submit]
+{
+	width: auto;
+}
+
+span
+{
+	width: 170px;
+}
+
+.card
+{
+	display: inline-block;
+	background: linear-gradient(aliceblue,yellow);
+	z-index: 30;
+	width: 280px;
+	height: 100px;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid black;
+	word-wrap: break-word;
+	border-radius: 5px;
+	text-align: center;
+	overflow: scroll;
+}
+
+.rolodex
+{
+	position: absolute;
+	z-index: 10;
+	top: 5%;
+	right: 20px;
+	display: inline-block;
+	width: 50%;
+	min-width: 650px;
+	min-height: 90%;
+	border: 1px solid black;
+	border-radius: 5px;
+}
